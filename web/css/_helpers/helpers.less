@@ -1,0 +1,24 @@
+/* CLEAR FIX*/ 
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/  
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}     
+/* End hide from IE-mac */ 
+
+.section { 
+    overflow: hidden;
+    position: relative;
+    padding-top: 20px;
+}
+
+.menuancor { 
+    position: absolute; 
+    margin-top: -75px; 
+    width: 0px;  
+    height: 0px; 
+    display: block;
+    @media (max-width: 992px) { margin-top: -53px; }
+} 
+
+* { text-shadow: none; -webkit-font-smoothing: subpixel-antialiased; margin:0; padding:0; }  

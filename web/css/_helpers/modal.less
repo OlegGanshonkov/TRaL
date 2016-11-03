@@ -1,0 +1,206 @@
+/**
+ * modal
+ */
+.modal-open {
+    overflow: auto !important;
+    padding-right: 0px !important;    
+}
+
+#login-modal.modal {
+    padding-right: 0 !important;
+    .modal-header {  
+        font-family: 'BebasNeueBold', sans-serif;        
+        text-align: center;
+        font-size: 38px;
+    }
+    .modal-dialog.authmodal { max-width: 400px !important; margin-left: auto; margin-right: auto; }
+    .div-input { 
+        width: 220px; margin: 0 auto; float: none; padding: 0px; 
+        @media (max-width: 770px) { width: 190px; }
+        .form-group { padding: 0px; }
+    }
+    .btn { 
+        &:hover, &:focus, &:active {
+            background: #48ccff !important;
+            color: #fff;
+        }
+        width: 220px;
+        padding: 0;
+        background: #fff;
+        font-size: 30px;
+        color: #48ccff;
+        font-family: 'BebasNeueBold', sans-serif;   
+        border-radius: 0px;
+        border: 1px solid #fff;
+        @media (max-width: 770px) { width: 190px; font-size: 24px; }
+    }
+}
+
+.modal-dialog.authmodal {
+    .modal-header {
+        height: 90px;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        font-size: 38px;
+        background: #48ccff;
+        text-align: center;        
+        padding-top: 22px;
+        @media (max-width: 770px) { height: 60px; font-size: 18px !important; }
+    }
+
+    .modal-content {
+        background: #48ccff !important;        
+        border: none !important;
+        border-radius: 0px !important;
+        @media (max-width: 768px) { margin: 20px 10px 10px 10px; }
+        .modal-body{
+            padding: 0px !important;
+            overflow:hidden;
+            width:100%;
+            .panel {
+                padding-top: 10px;
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+
+                .panel-body {
+                    @media (max-width: 770px) { padding:0px 5px 5px 5px;}
+                }
+                input {
+                    &::-webkit-input-placeholder {color: #fff; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &::-moz-placeholder          {color: #fff; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &:-moz-placeholder           {color: #fff; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &:-ms-input-placeholder      {color: #fff; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    background: #48ccff;
+                    border-color: #fff;
+                    color: #fff;
+                    border-radius: 0px !important;
+                }
+                .select2-selection {
+                    &::-webkit-input-placeholder {color: #fff !important; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &::-moz-placeholder          {color: #fff !important; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &:-moz-placeholder           {color: #fff !important; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &:-ms-input-placeholder      {color: #fff !important; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    border-radius: 0px !important;
+                    color: #fff;
+                    border-color: #fff;                    
+                    background: #48ccff;
+                }
+                textarea {
+                    &::-webkit-input-placeholder {color: #fff; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &::-moz-placeholder          {color: #fff; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &:-moz-placeholder           {color: #fff; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    &:-ms-input-placeholder      {color: #fff; font-family: 'BebasNeueRegular', sans-serif; font-size: 16px; font-weight: 100 !important;}
+                    background: #48ccff;
+                    color: #fff;
+                    border-color: #fff;
+                    border-radius: 0px !important;
+                    resize: none;
+                }
+                .hint-block {
+                    color: #fff;
+                }
+                .div-input {
+                    margin-bottom: 0px;
+                    @media (max-width: 770px) { padding-left:0px; padding-right:0px; }
+                    .form-group { padding: 0px 10px; }
+                }
+                .help-block { 
+                    font-family: 'BebasNeueRegular', sans-serif;
+                    font-weight: 100 !important;
+                    font-size: 14px; 
+                    line-height: 19px;
+                    color: #fff; 
+                    margin: 0px;
+                }
+                .form-group { margin-bottom: 25px; }
+                .form-group.has-error { 
+                    margin-bottom: 10px; 
+                    .form-control { border: 2px solid yellow !important; }
+                }
+                .login-input { .form-group { width: 300px; margin:0 auto; } }
+                .disclaimer {  
+                    label {                        
+                        color: #fff !important; 
+                        font-family: 'BebasNeueRegular', sans-serif;
+                        font-weight: 100 !important;
+                        font-size: 16px;
+                        a { color: #fff !important; } 
+                        input { top: 2px; position: relative; margin-right: 5px; }
+                    }                    
+
+                }
+                button {
+                    &:hover {
+                        background: @blue-text;
+                        color: #fff;
+                    }
+                    font-family: 'helveticaB', sans-serif;
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: #fff;
+                    background-color: transparent;
+                    width: 200px;
+                    padding: 7px 10px;
+                    display: block;
+                    margin: 0 auto;
+                    position: relative;
+                    border: 2px solid #fff;                
+                    outline: none;
+                    @media (max-width: 992px) { font-size: 14px; }
+                    @media (max-width: 770px) { 
+                        font-size: 14px;
+                        width: 90%;
+                    }
+                } 
+                .ftable {
+                    @media (min-width: 770px) { display: table; }
+
+                    .div-input { 
+                        @media (min-width: 770px) { 
+                            display: table-cell;
+                            width: 50%;
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* modal registration */
+#reg-modal {
+    padding-right: 0 !important;
+    .modal-header {  
+        font-family: 'BebasNeueBold', sans-serif !important;        
+        text-align: center;
+        font-size: 38px;
+        @media (max-width: 770px) { height: 60px; font-size: 18px !important; }
+    }    
+    .modal-dialog {
+        width: 80%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        @media (max-width: 770px) { width: 100%; }
+    }
+    .btn { 
+        &:hover, &:focus, &:active {
+            background: #48ccff !important;
+            color: #fff;
+        }
+        width: 220px;
+        padding: 0;
+        background: #fff;
+        font-size: 30px;
+        color: #48ccff;
+        font-family: 'BebasNeueBold', sans-serif;   
+        border-radius: 0px;
+        border: 1px solid #fff;
+        @media (max-width: 770px) { width: 190px; font-size: 24px; }
+    }
+}
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
