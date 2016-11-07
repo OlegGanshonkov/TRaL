@@ -63,7 +63,7 @@ $this->title = 'My Yii Application';
                         <div><img title="<?= Yii::t('app/app-info-2', 'Power up') ?>" height="60" src="<?= Yii::$app->params['img'] ?>app/app-info-2/item03.png" /></div>
                         <div><img title="<?= Yii::t('app/app-info-2', 'Power up') ?>" height="60" src="<?= Yii::$app->params['img'] ?>app/app-info-2/item04.png" /></div>
                     </div>
-                </div>            
+                </div>
             </div>
         </div>
         <div class="app-form">
