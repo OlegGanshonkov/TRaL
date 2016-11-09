@@ -63,44 +63,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $literalArr = [
-            0 => [
-                'value' => 'в',
-                'found' => 0
-            ],
-            1 => [
-                'value' => 'е',
-                'found' => 0
-            ],
-            2 => [
-                'value' => 'ц',
-                'found' => 0
-            ],
-            3 => [
-                'value' => 'ч',
-                'found' => 0
-            ],
-            4 => [
-                'value' => 'г',
-                'found' => 0
-            ],
-            5 => [
-                'value' => 'у',
-                'found' => 0
-            ],
-            6 => [
-                'value' => 'а',
-                'found' => 0
-            ],
-            7 => [
-                'value' => 'л',
-                'found' => 0
-            ],
-        ];
+        //unset(Yii::$app->session['literalRows']);
         $literalModel = new Literal();
-        $literalModel->setRow($literalArr);
 
-        //if (Yii::$app->getRequest()->isAjax) {
+        if ($literalModel->checkAllfind()) {
+            $literalModel->currentRow++;
+            $literalModel->createRow();
+            Yii::$app->session['literalRows'] = $literalModel->getAllRows();
+        }
+
         if (Yii::$app->request->isAjax && $literalModel->load(Yii::$app->request->post())) {
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             return \yii\widgets\ActiveForm::validate($literalModel);
@@ -108,6 +79,10 @@ class SiteController extends Controller
 
         if ($literalModel->load(Yii::$app->request->post()) && $literalModel->validate()) {
             $literalModel->word = '';
+            Yii::$app->session['literalRows'] = $literalModel->getAllRows();
+            if ($literalModel->checkAllfind()) {
+                $this->refresh();
+            }
             return $this->render('index', [
                     'literalModel' => $literalModel
             ]);

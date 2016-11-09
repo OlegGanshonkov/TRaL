@@ -1,6 +1,8 @@
 <?php
 /* @var $this yii\web\View */
 
+$this->registerJsFile('@web/js/app.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+
 // Yii
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
